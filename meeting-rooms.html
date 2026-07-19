@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BPL Meeting Rooms | Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="interior-page">
+  <header class="interior-hero">
+    <nav class="topbar" aria-label="Main navigation">
+      <a class="brand" href="index.html">
+        <img src="assets/bpl-logo.png" alt="Birmingham Public Library logo" />
+      </a>
+      <div class="nav-links open">
+        <a href="index.html">Home</a>
+        <a href="aboutbpl.html">Prototype Overview & Design Process</a>
+        <a href="#overview">Overview</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#rules">Rules</a>
+        <a href="#request">Request a Room</a>
+         <a href="index.html#digital">Digital Library</a>
+        <a href="https://jeffa.na.iiivega.com/search?query=Library%20of%20Things&searchType=everything&pageSize=40&universalLimiterIds=at_library&pageNum=0" target="_blank"
+   rel="noopener noreferrer">Library of Things</a>
+        <a href="https://bplolinenews.blogspot.com/" target="_blank"
+   rel="noopener noreferrer">BPL Blog</a>
+        <a class="nav-cta" href="index.html#card">Get a Library Card</a>
+      </div>
+    </nav>
+
+    <div class="interior-copy">
+      <p class="eyebrow">Meeting rooms at BPL</p>
+      <h1>Gather, learn, and connect.</h1>
+      <p>One clear destination for room types, policies, pricing, and requests.</p>
+    </div>
+  </header>
+
+  <main class="interior-main">
+    <section class="interior-card" id="overview">
+      <h2>Meeting Room Overview</h2>
+      <p>Use this page to organize all meeting-room details in one place instead of making staff and patrons search across multiple documents.</p>
+    </section>
+
+    <section class="interior-card" id="pricing">
+      <h2>Pricing & Fees</h2>
+      <p>Prototype content: Add approved pricing tables, deposits, equipment fees, and nonprofit eligibility details here.</p>
+    </section>
+
+    <section class="interior-card" id="rules">
+      <h2>Rules & Requirements</h2>
+      <p>Prototype content: Add reservation limits, food policies, setup requirements, capacity, cancellation rules, and prohibited uses here.</p>
+    </section>
+
+    <section class="interior-card" id="request">
+      <h2>Request a Room</h2>
+      <form id="room-form">
+        <label for="requester-name">Name</label>
+        <input id="requester-name" type="text" required />
+
+        <label for="room-location">Preferred location</label>
+        <select id="room-location">
+          <option>Central Library</option>
+          <option>Five Points West</option>
+          <option>Avondale Library</option>
+        </select>
+
+        <button type="submit">Start Request</button>
+      </form>
+      <p id="room-message" class="status-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script>
+    document.querySelector('#room-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.querySelector('#requester-name').value.trim();
+      document.querySelector('#room-message').textContent =
+        `Thank you, ${name}. Your demo room request has started.`;
+    });
+  </script>
+
+  <button
+  id="back-to-top"
+  class="back-to-top"
+  type="button"
+  aria-label="Back to top"
+  title="Back to top"
+>
+  ↑
+</button>
+  <script src="script.js"></script>
+
+</body>
+</html>

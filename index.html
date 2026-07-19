@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A modern Birmingham Public Library website prototype featuring WiFi printing, branch programs, meeting rooms, digital resources, and the BPL Blog." />
+  <title>Birmingham Public Library | Explore More</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="hero" id="home">
+    <nav class="topbar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Birmingham Public Library home">
+        <img src="assets/bpl-logo.png" alt="Birmingham Public Library logo" />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+        Menu
+      </button>
+
+      <div class="nav-links" id="main-menu">
+        <a href="aboutbpl.html">Prototype Overview & Design Process</a>
+        <a href="#branch-programs">Branch Programs</a>
+
+        <div class="dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false"
+          aria-controls="meeting-room-menu"
+    aria-haspopup="true">
+            Meeting Rooms
+          </button>
+          <div class="dropdown-menu">
+            <a href="meeting-rooms.html">Meeting Room Overview</a>
+            <a href="meeting-rooms.html#pricing">Pricing & Fees</a>
+            <a href="meeting-rooms.html#rules">Rules & Requirements</a>
+            <a href="meeting-rooms.html#request">Request a Room</a>
+          </div>
+        </div>
+
+        <a href="#digital">Digital Library</a>
+        <a href="#library-things">Library of Things</a>
+        <a href="#blog">BPL Blog</a>
+      </div>
+
+      <a class="nav-cta" href="#card">Get a Library Card</a>
+    </nav>
+
+    <div class="hero-grid">
+      <section class="hero-copy">
+        <p class="eyebrow">Birmingham Public Library</p>
+       <h1>
+  Community Is Our Mission,<br>
+  Vision, and Core Value.
+</h1>
+        <p class="hero-text">
+          Discover culturally enriching programs across every branch, print from anywhere, reserve meeting space,
+          explore trusted databases, and borrow more than books.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#branch-programs">Explore Branch Programs</a>
+          <a class="button glass-button" href="#wifi-printing">Use WiFi Printing</a>
+        </div>
+      </section>
+
+      <section class="glass-panel catalog-panel"
+         id="catalog"
+         aria-labelledby="catalog-heading">
+
+    <p class="eyebrow dark">Start here</p>
+
+    <h2 id="catalog-heading">Search BPL</h2>
+
+    <form id="catalog-search"
+          role="search"
+          action="https://jeffa.na.iiivega.com/search"
+          method="get"
+          target="_blank">
+
+        <label class="visually-hidden" for="catalog-query">
+            Search books, movies, music, databases, and more
+        </label>
+
+        <div class="search-row">
+            <input
+                id="catalog-query"
+                name="query"
+                type="search"
+                placeholder="Books, movies, music, databases..."
+                required>
+
+            <input type="hidden"
+                   name="searchType"
+                   value="everything">
+
+            <input type="hidden"
+                   name="pageSize"
+                   value="10">
+
+            <button type="submit">Search</button>
+        </div>
+
+    </form>
+
+    <div class="quick-searches">
+
+        <a class="quick-search-button"
+           href="https://jeffa.na.iiivega.com/library-list/showcase/a0b8ebb6-fb92-4a9f-a774-399cbe4bb577"
+           target="_blank"
+           rel="noopener noreferrer">
+            New Books
+        </a>
+
+        <a class="quick-search-button"
+           href="https://jeffa.na.iiivega.com/search?query=audiobooks&searchType=everything&pageSize=10&materialTypeIds=y,i&pageNum=0"
+           target="_blank"
+           rel="noopener noreferrer">
+            Audiobooks
+        </a>
+
+        <a class="quick-search-button"
+           href="https://www.cobpl.org/virtual/databases/default.aspx?p=2&q=26#db"
+           target="_blank"
+           rel="noopener noreferrer">
+            Local History
+        </a>
+
+    </div>
+
+    <p id="catalog-message"
+       class="status-message"
+       aria-live="polite">
+    </p>
+
+</section>
+
+      <section class="wifi-card" id="wifi-printing">
+        <div class="wifi-copy">
+          <p class="eyebrow light">Fast patron service</p>
+          <h2>WiFi Printing</h2>
+          <p>Upload from your phone, tablet, or laptop and pick up your print at the library.</p>
+          <a class="button secondary" href="https://smartalecplus.smartalecprint.com/?ID=JeffersonCountyAL" target="_blank" rel="noopener noreferrer">Start WiFi Printing</a>
+          <p id="wifi-message" class="status-message" aria-live="polite"></p>
+        </div>
+        <div class="qr-wrap">
+          <a href="https://smartalecplus.smartalecprint.com/?ID=JeffersonCountyAL" target="_blank" rel="noopener noreferrer">
+            <img src="assets/wifi-printing-qr.png" alt="QR code linking to Birmingham Public Library WiFi printing demo" />
+          </a>
+          <small>Scan to begin</small>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="utility-strip" aria-labelledby="utility-heading">
+      <div class="section-heading">
+        <p class="eyebrow dark">Most used</p>
+        <h2 id="utility-heading">Popular Library Services</h2>
+      </div>
+
+      <div class="utility-grid">
+        <a class="utility-card plum" href="#branch-programs">
+          <span>📅</span>
+          <strong>Branch Programs</strong>
+          <small>See events near you</small>
+        </a>
+
+        <a class="utility-card jade" href="#wifi-printing">
+          <span>🖨️</span>
+          <strong>WiFi Printing</strong>
+          <small>Print from any device</small>
+        </a>
+
+        <a class="utility-card gold" href="meeting-rooms.html">
+          <span>🏛️</span>
+          <strong>Meeting Rooms</strong>
+          <small>Rules, pricing, requests</small>
+        </a>
+
+        <a class="utility-card rose" href="#digital">
+          <span>🧠</span>
+          <strong>Research Databases</strong>
+          <small>Trusted information</small>
+        </a>
+
+        <a class="utility-card ink" href="#library-things">
+          <span>🧰</span>
+          <strong>Library of Things</strong>
+          <small>Borrow beyond books</small>
+        </a>
+
+        <a class="utility-card teal" href="#blog">
+          <span>📰</span>
+          <strong>BPL Blog</strong>
+          <small>Stories, events, highlights</small>
+        </a>
+      </div>
+    </section>
+
+    <section class="program-section" id="branch-programs">
+      <div class="section-heading program-heading">
+        <div>
+          <p class="eyebrow dark">Across Birmingham</p>
+          <h2>Programs by Branch</h2>
+          <p>Highlight every branch and make it easier for patrons to discover programs close to home.</p>
+        </div>
+
+        <label class="branch-filter">
+          <span>Filter branches</span>
+          <select id="branch-filter">
+            <option value="all">All branches</option>
+            <option value="central">Central Library</option>
+            <option value="powderly">Powderly</option>
+            <option value="avondale">Avondale</option>
+            <option value="five-points">Five Points West</option>
+            <option value="north-birmingham">North Birmingham</option>
+            <option value="woodlawn">Woodlawn</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="branch-grid">
+        <article class="branch-card" data-branch="central">
+          <span class="branch-number">01</span>
+          <h3>Central Library</h3>
+          <p>Author talks, exhibits, technology classes, and cultural programming.</p>
+          <button type="button" data-branch-name="Central Library">
+          <a
+   class="branch-button"
+  href="https://www.cobpl.org/calendar/"
+  target="_blank"
+  rel="noopener noreferrer">
+
+  View Programs
+</a></button>
+        </article>
+
+        <article class="branch-card" data-branch="powderly">
+          <span class="branch-number">02</span>
+          <h3>Powderly</h3>
+          <p>STEAM learning, family programs, digital literacy, and community events.</p>
+         <button type="button" data-branch-name="Powderly Branch">
+          <a
+   class="branch-button"
+  href="https://www.cobpl.org/calendar/"
+  target="_blank"
+  rel="noopener noreferrer">
+
+  View Programs
+</a></button>
+        </article>
+
+        <article class="branch-card" data-branch="avondale">
+          <span class="branch-number">03</span>
+          <h3>Avondale</h3>
+          <p>Storytimes, book clubs, performances, and neighborhood gatherings.</p>
+          <button type="button" data-branch-name="Avondale Library">
+          <a
+   class="branch-button"
+  href="https://www.cobpl.org/calendar/"
+  target="_blank"
+  rel="noopener noreferrer">
+
+  View Programs
+</a></button>
+        </article>
+
+        <article class="branch-card" data-branch="five-points">
+          <span class="branch-number">04</span>
+          <h3>Five Points West</h3>
+          <p>Workshops, youth activities, health programs, and family resources.</p>
+          <button type="button" data-branch-name="Five Points West">
+          <a
+   class="branch-button"
+  href="https://www.cobpl.org/calendar/"
+  target="_blank"
+  rel="noopener noreferrer">
+
+  View Programs
+</a></button>
+        </article>
+
+        <article class="branch-card" data-branch="north-birmingham">
+          <span class="branch-number">05</span>
+          <h3>North Birmingham</h3>
+          <p>Community learning, school-age enrichment, and local partnerships.</p>
+          <button type="button" data-branch-name="North Birmingham">
+          <a
+   class="branch-button"
+  href="https://www.cobpl.org/calendar/"
+  target="_blank"
+  rel="noopener noreferrer">
+
+  View Programs
+</a></button>
+        </article>
+
+        <article class="branch-card" data-branch="woodlawn">
+          <span class="branch-number">06</span>
+          <h3>Woodlawn</h3>
+          <p>Creative programs, technology access, and neighborhood engagement.</p>
+         <button type="button" data-branch-name="Woodlawn Library">
+          <a
+   class="branch-button"
+  href="https://www.cobpl.org/calendar/"
+  target="_blank"
+  rel="noopener noreferrer">
+
+  View Programs
+</a></button>
+        </article>
+      </div>
+
+      <p id="branch-message" class="status-message" aria-live="polite"></p>
+    </section>
+
+    <section class="feature-grid" id="digital">
+      <article class="database-feature">
+        <div>
+          <p class="eyebrow light">Database of the Month</p>
+          <h2>American Memory: Library of Congress</h2>
+          
+          <p>
+            For America 250, journey deep into the history, the adventure, & the gripping collections. 
+            Explore millions of digitized books, photographs, maps, manuscripts, recordings, and historical treasures from the Library of Congress.
+             The world's largest library preserves America's largest memories.
+          </p>
+          <a id="database-button"
+   class="button secondary"
+   href="https://www.loc.gov/collections/"
+   target="_blank"
+   rel="noopener noreferrer">
+    Explore Database
+</a>
+          
+        </div>
+        <div class="database-orbit">
+
+  <a class="orbit-link"
+     href="https://www.loc.gov/collections/?fa=subject_topic:american+history"
+     target="_blank"
+     rel="noopener noreferrer">
+    American History
+  </a>
+
+  <a class="orbit-link"
+     href="https://www.loc.gov/collections/?fa=subject_topic:performing+arts%7Cpartof:american+folklife+center"
+     target="_blank"
+     rel="noopener noreferrer">
+    American Folklore Center
+  </a>
+
+  <a class="orbit-link"
+     href="https://www.loc.gov/collections/?fa=subject_topic:performing+arts%7Cpartof:american+folklife+center%7Csubject_topic:african+american+history"
+     target="_blank"
+     rel="noopener noreferrer">
+    African American History
+  </a>
+
+</div>
+
+</article> <!-- closes the Database of the Month article -->
+
+
+<article class="things-feature" id="library-things">
+
+  <p class="eyebrow dark">Borrow more than books</p>
+
+  <a href="https://jeffa.na.iiivega.com/search?query=Library%20of%20Things&searchType=everything&pageSize=40&universalLimiterIds=at_library&pageNum=0" target="_blank"
+   rel="noopener noreferrer" class="no-underline">
+    <h2>Library of Things</h2>
+  </a>
+
+  <p>
+    Discover tools, technology, kits, games, and useful items
+    that support learning and everyday life.
+  </p>
+
+  <div class="thing-list">
+
+    <a
+  href="https://jeffa.na.iiivega.com/search/card?id=8655a6a9-f6c0-4838-95a6-a9f6c09838ad&entityType=FormatGroup"
+  class="button primary no-underline"
+  data-thing="mobile hotspot"
+  target="_blank"
+  rel="noopener noreferrer">
+  📶 Mobile Hotspots
+</a>
+
+    <a href="https://jeffa.na.iiivega.com/search/card?id=7e3dcad6-6994-4be8-bdca-d66994bbe841&entityType=FormatGroup" class="button primary no-underline" data-thing="telescope" target="_blank"
+   rel="noopener noreferrer">
+      🔭 Telescopes
+    </button></a>
+
+    <a href="https://jeffa.na.iiivega.com/search?query=board%20games&searchType=everything&pageSize=10&materialTypeIds=o,bg&pageNum=0" class="button primary no-underline" data-thing="Board Games" target="_blank"
+   rel="noopener noreferrer">
+      🎲 Board Games
+    </a>
+
+    <a href="https://jeffa.na.iiivega.com/search?query=craft%20kits&searchType=everything&pageSize=10" class="button primary no-underline" data-thing="craft kit" target="_blank"
+   rel="noopener noreferrer">
+      🎨 Craft Kits
+    </a>
+
+  </div>
+
+  <p id="thing-message"
+     class="status-message"
+     aria-live="polite">
+  </p>
+
+</article>
+    </section>
+
+    <section class="blog-section" id="blog">
+      <div class="blog-intro">
+        <p class="eyebrow light">Stories from BPL</p>
+        <h2>The BPL Blog</h2>
+        <p>Bring library stories, program highlights, staff recommendations, and community impact to the front page.</p>
+        <a
+  id="blog-button"
+  class="button secondary"
+  href="https://bplolinenews.blogspot.com/"
+  target="_blank"
+  rel="noopener noreferrer">
+  Visit the BPL Blog
+</a>
+      </div>
+
+      <div class="blog-cards">
+        <article>
+          <span>Community</span>
+          <h3>Summer Reading Across Birmingham</h3>
+          <p>See how branches are bringing stories, science, and creativity to neighborhoods.</p>
+        </article>
+
+        <article>
+          <span>Staff Picks</span>
+          <h3>What Birmingham Is Reading</h3>
+          <p>Discover books, films, and digital resources recommended by BPL librarians.</p>
+        </article>
+
+        <article>
+          <span>Behind the Scenes</span>
+          <h3>Meet the People Who Make BPL Work</h3>
+          <p>Celebrate staff expertise, partnerships, and the everyday work of public service.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card-section" id="card">
+      <div>
+        <p class="eyebrow dark">Join BPL</p>
+        <h2>Your library card opens the door.</h2>
+        <p>Books, databases, streaming, classes, meeting spaces, WiFi printing, and more.</p>
+      </div>
+
+      <form id="card-form">
+        
+        <a
+  class="button primary"
+  href="https://www.cobpl.org/services/LibraryCards/Application.aspx"
+  target="_blank"
+  rel="noopener noreferrer">
+
+  Start Your Library Card Application
+</a>
+
+       
+      </form>
+
+      <p id="card-message" class="status-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/bpl-logo.png" alt="" aria-hidden="true" />
+    <p>Modern Birmingham Public Library website concept</p>
+    <p>Plum • Jade • Gold • BPL Red</p>
+  </footer>
+
+ <button
+  id="back-to-top"
+  class="back-to-top"
+  type="button"
+  aria-label="Back to top"
+  title="Back to top"
+>
+  ↑
+</button>
+  <script src="script.js"></script>
+
+</body>
+</html>
