@@ -1241,3 +1241,98 @@ section {
     transition: none;
   }
 }
+
+/* Smaller phones */
+@media (max-width: 600px) {
+  /* additional tweaks for small screens */
+}
+
+/* iPad portrait and smaller tablets */
+@media (max-width: 900px) {
+
+  /* Header and navigation */
+  .header-inner,
+  .nav-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.35rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Prevent dropdowns from floating over half the page */
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    box-shadow: none;
+    transform: none;
+  }
+
+  /* Hero and catalog area */
+  .hero,
+  .hero-content {
+    width: 100%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .catalog-search {
+    position: static;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem auto 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .catalog-search form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .catalog-search input,
+  .catalog-search select,
+  .catalog-search button {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
