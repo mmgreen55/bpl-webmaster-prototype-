@@ -1309,30 +1309,52 @@ section {
   }
 
   .catalog-search {
-    position: static;
-    left: auto;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    margin: 1rem auto 0;
-    padding: 0 1rem;
-    box-sizing: border-box;
-  }
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
 
-  .catalog-search form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 0.75rem;
-  }
+  width: calc(100% - 2rem) !important;
+  max-width: 700px;
+  margin: 1rem auto !important;
+  box-sizing: border-box;
+}
 
-  .catalog-search input,
-  .catalog-search select,
-  .catalog-search button {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
+ .catalog-search form {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.catalog-search input,
+.catalog-search select,
+.catalog-search button {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+header,
+.site-header,
+.main-header {
+  position: static !important;
+  height: auto !important;
+}
+
+main,
+.meeting-room-page,
+.page-content {
+  padding-top: 1rem !important;
+  margin-top: 0 !important;
+}
+
+nav,
+.navbar,
+.main-nav {
+  position: static !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
 }
