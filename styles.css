@@ -2685,4 +2685,32 @@ header,
     border-radius:0;
 }
 
+
+}
+@media (max-width: 700px) {
+
+  .topbar {
+    position: relative;
+    top: 0;
+    left: auto;
+    right: auto;
+    transform: none;
+    width: calc(100% - 1rem);
+    margin: 0.5rem auto;
+    padding: 0.6rem;
+  }
+
+  .brand {
+    justify-self: center;
+  }
+
+  .brand img {
+    margin: 0 auto;
+  }
+
+  .interior-hero {
+    padding-top: 3rem;
+  }
+}
+
 }

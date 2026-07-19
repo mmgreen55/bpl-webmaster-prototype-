@@ -12,7 +12,15 @@
       <a class="brand" href="index.html">
         <img src="assets/bpl-logo.png" alt="Birmingham Public Library logo" />
       </a>
-      <div class="nav-links open">
+
+      <button class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="meeting-nav">
+  Menu
+</button>
+
+      <div class="nav-links" id="meeting-nav">
         <a href="index.html">Home</a>
         <a href="aboutbpl.html">Prototype Overview & Design Process</a>
         <a href="#overview">Overview</a>
@@ -89,6 +97,18 @@
   ↑
 </button>
   <script src="script.js"></script>
+
+  <script>
+  const menuButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (menuButton && navLinks) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', isOpen);
+    });
+  }
+</script>
 
 </body>
 </html>
