@@ -2674,9 +2674,6 @@ header,
   height: auto !important;
 }
 
-
-
-
 .topbar{
     position:static;
     transform:none;
@@ -2686,56 +2683,6 @@ header,
 }
 
 
-}
-@media (max-width: 700px) {
-
-  .topbar {
-    position: relative;
-    top: 0;
-    left: auto;
-    right: auto;
-    transform: none;
-    width: calc(100% - 1rem);
-    margin: 0.5rem auto;
-    padding: 0.6rem;
-     
-  }
-
-  .brand {
-    justify-self: center;
-  }
-
-  .brand img {
-    margin: 0 auto;
-  }
-
-  .interior-hero {
-    padding-top: 3rem;
-  }
-}
-
-@media (max-width: 1080px) {
-  .topbar {
-    position: relative;
-    z-index: 9999;
-    overflow: visible;
-  }
-
-  .nav-links {
-    position: relative;
-    z-index: 10000;
-    background: rgba(255, 255, 255, 0.98);
-    border-radius: 0 0 18px 18px;
-    padding: 0.75rem;
-  }
-
-  .hero,
-  .interior-hero,
-  .hero-grid,
-  .interior-copy {
-    position: relative;
-    z-index: 1;
-  }
 }
 
 }
