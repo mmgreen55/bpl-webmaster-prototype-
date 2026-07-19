@@ -2698,6 +2698,7 @@ header,
     width: calc(100% - 1rem);
     margin: 0.5rem auto;
     padding: 0.6rem;
+     
   }
 
   .brand {
@@ -2710,6 +2711,30 @@ header,
 
   .interior-hero {
     padding-top: 3rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .topbar {
+    position: relative;
+    z-index: 9999;
+    overflow: visible;
+  }
+
+  .nav-links {
+    position: relative;
+    z-index: 10000;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 0 0 18px 18px;
+    padding: 0.75rem;
+  }
+
+  .hero,
+  .interior-hero,
+  .hero-grid,
+  .interior-copy {
+    position: relative;
+    z-index: 1;
   }
 }
 
